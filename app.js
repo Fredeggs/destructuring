@@ -42,3 +42,44 @@ function checkout1(tea){
 }
 checkout1(order1)
 
+// *****************************
+// DESTRUCTURING WITH ARRAYS
+// *****************************
+
+const students = [
+    {name: 'Drake', gpa: 4.6},
+    {name: 'Henrietta', gpa: 4.4},
+    {name: 'Tung', gpa: 4.0},
+    {name: 'Harry', gpa: 3.8},
+    {name: 'Ant', gpa: 3.2}
+];
+
+const [first, ...losers] = students;
+
+// *****************************
+// FUNCTION DESTRUCTURING
+// *****************************
+
+const order2 = {
+    variety: 'green',
+    teaName: 'silver needle',
+    origin: 'taiwan',
+    price: 12.99,
+    hasCaffeine: true,
+    quantity: 4
+};
+
+function getTotal({quantity: qty = 1, price}){
+    return qty * price;
+};
+
+const longJumpResults = ['Jimmy', 'Bimbo', 'Slug'];
+const swimMeetResults = ['Tammy', 'Abraham', 'Gertrude'];
+
+function awardMedals ([gold, silver, bronze]){
+    return {
+        gold,
+        silver,
+        bronze
+    };
+};
